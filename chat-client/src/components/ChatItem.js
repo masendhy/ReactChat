@@ -7,7 +7,7 @@ function ChatItem (props) {
         <div className="timeline-entry-inner">
 
             <div className="timeline-icon bg-success">
-            <i className="entypo-feather"></i><a href="#" onClick={() =>{props.deleteChat(props.item.id); return false;} }>x</a>
+            <i className="entypo-feather"></i><a href="#" onClick={(event) =>{props.deleteChat(props.item.id); event.preventDefault();} }>x</a>
             </div>
             <div className="timeline-label">
                 <h2><a href="#">{props.item.name}</a> <span></span></h2>
